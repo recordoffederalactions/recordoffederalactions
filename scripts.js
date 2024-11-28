@@ -1,37 +1,62 @@
-document.addEventListener("DOMContentLoaded", function() {
-    // Fetch and display live feed data
-    const dateFilter = document.getElementById("date-filter");
-    const actionsFeed = document.getElementById("actions-feed");
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
 
-    function fetchActions(date) {
-        fetch(`https://api.example.com/actions?date=${date}`)
-            .then(response => response.json())
-            .then(data => {
-                actionsFeed.innerHTML = ""; // Clear existing actions
-                data.forEach(action => {
-                    const actionElement = document.createElement("div");
-                    actionElement.classList.add("action-item");
-                    actionElement.innerHTML = `
-                        <h3>${action.title}</h3>
-                        <p><strong>Issued by:</strong> ${action.office}</p>
-                        <p><strong>Date:</strong> ${action.date}</p>
-                        <p><strong>Category:</strong> ${action.category}</p>
-                        <a href="${action.link}" target="_blank">Read more</a>
-                    `;
-                    actionsFeed.appendChild(actionElement);
-                });
-            })
-            .catch(error => {
-                console.error("Error fetching actions:", error);
-            });
-    }
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
 
-    // Event listener for date filter
-    dateFilter.addEventListener("change", function() {
-        const selectedDate = dateFilter.value;
-        fetchActions(selectedDate);
-    });
+h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
 
-    // Fetch actions for today on load
-    fetchActions(new Date().toISOString().split('T')[0]);
-});
+main {
+    margin: 20px;
+    padding: 10px;
+}
+
+#actions {
+    margin-top: 20px;
+}
+
+h2 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+#agencies {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#agency-list {
+    padding: 10px;
+    margin: 10px 0;
+    width: 250px;
+}
+
+#agency-actions {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+footer {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
