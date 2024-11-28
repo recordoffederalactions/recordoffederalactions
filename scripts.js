@@ -1,62 +1,56 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f0f0f0;
+const agencies = [
+    { agency: "Department of Justice", id: "DOJ" },
+    { agency: "Department of Defense", id: "DOD" },
+    { agency: "Federal Reserve", id: "FED" },
+    { agency: "Environmental Protection Agency", id: "EPA" },
+    { agency: "Federal Bureau of Investigation", id: "FBI" },
+    { agency: "Central Intelligence Agency", id: "CIA" },
+    { agency: "National Aeronautics and Space Administration", id: "NASA" },
+    { agency: "U.S. Treasury", id: "UST" },
+    { agency: "Department of State", id: "DOS" },
+    { agency: "Department of Homeland Security", id: "DHS" },
+    { agency: "Department of Health and Human Services", id: "HHS" },
+    { agency: "National Institutes of Health", id: "NIH" },
+    { agency: "Department of Labor", id: "DOL" },
+    { agency: "Department of Transportation", id: "DOT" },
+    { agency: "Department of Veterans Affairs", id: "VA" },
+    { agency: "Social Security Administration", id: "SSA" },
+    // Add more agencies as needed
+];
+
+// Populate the dropdown with agency names
+function populateAgencyDropdown() {
+    const dropdown = document.getElementById("agency-list");
+    agencies.forEach((agency) => {
+        const option = document.createElement("option");
+        option.value = agency.id;
+        option.textContent = agency.agency;
+        dropdown.appendChild(option);
+    });
 }
 
-header {
-    background-color: #333;
-    color: white;
-    padding: 20px;
-    text-align: center;
+// Display actions based on selected agency (placeholder data for now)
+function displayAgencyActions(agencyId) {
+    const agencyActions = document.getElementById("agency-actions");
+    const selectedAgency = agencies.find(agency => agency.id === agencyId);
+
+    if (selectedAgency) {
+        // This would be replaced with dynamic content based on real data
+        agencyActions.innerHTML = `
+            <h3>Actions for ${selectedAgency.agency}</h3>
+            <p>Sample action: Agency took a policy decision on XYZ topic.</p>
+            <p>Sample action: Agency announced a new initiative related to ABC.</p>
+        `;
+    }
 }
 
-h1 {
-    margin: 0;
-    font-size: 2.5em;
-}
+// Event listener for the dropdown to load actions when a selection is made
+document.getElementById("agency-list").addEventListener("change", (event) => {
+    const agencyId = event.target.value;
+    displayAgencyActions(agencyId);
+});
 
-main {
-    margin: 20px;
-    padding: 10px;
-}
-
-#actions {
-    margin-top: 20px;
-}
-
-h2 {
-    font-size: 1.8em;
-    margin-bottom: 10px;
-}
-
-#agencies {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-#agency-list {
-    padding: 10px;
-    margin: 10px 0;
-    width: 250px;
-}
-
-#agency-actions {
-    margin-top: 20px;
-    padding: 10px;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    width: 100%;
-}
-
-footer {
-    text-align: center;
-    background-color: #333;
-    color: white;
-    padding: 10px;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-}
+// Load the agency dropdown when the page loads
+window.onload = () => {
+    populateAgencyDropdown();
+};
