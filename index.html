@@ -7,34 +7,38 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <div class="logo-container">
-            <img src="logo.png" alt="Record of Federal Actions Logo">
-            <h1>Record of Federal Actions</h1>
+    <header class="navbar">
+        <div class="container">
+            <img src="logo.png" alt="Record of Federal Actions Logo" class="logo">
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Actions</a></li>
+                    <li><a href="#">Branches</a></li>
+                    <li><a href="#">Agencies</a></li>
+                    <li><a href="#">About</a></li>
+                </ul>
+            </nav>
         </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="actions.html">Actions</a></li>
-                <li><a href="branches.html">Branches</a></li>
-                <li><a href="agencies.html">Agencies</a></li>
-                <li><a href="about.html">About</a></li>
-            </ul>
-        </nav>
     </header>
-    <main>
-        <section class="welcome">
-            <h2>Welcome to the Record of Federal Actions</h2>
+
+    <main class="content">
+        <section class="hero">
+            <h1>Welcome to the Record of Federal Actions</h1>
             <p>Track and understand the key decisions, actions, and updates from federal branches and agencies.</p>
         </section>
-        <section class="rss-feeds">
+
+        <section class="updates">
             <h2>Latest Updates</h2>
-            <ul id="rss-feed-container"></ul>
+            <ul>
+                <li><strong>Update 1:</strong> Example of an update from RSS feed.</li>
+                <li><strong>Update 2:</strong> Example of another update from RSS feed.</li>
+            </ul>
         </section>
     </main>
-    <footer>
-        <p>&copy; 2024 Record of Federal Actions. All rights reserved.</p>
+
+    <footer class="footer">
+        <p>© 2024 Record of Federal Actions. All rights reserved.</p>
     </footer>
-    <script src="scripts.js"></script>
 </body>
 </html>
