@@ -8,89 +8,87 @@
 /* Body Styling */
 body {
     font-family: Arial, sans-serif;
-    color: #333;
-    background-color: #f4f4f9;
     line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+    padding: 0;
+    margin: 0;
 }
 
-/* Navbar Styling */
-.navbar {
-    background: #003366;
-    color: #fff;
-    padding: 10px 20px;
-}
-
-.navbar .container {
+/* Header Styling */
+header {
+    background: #0073e6;
+    color: white;
+    padding: 1rem 0;
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
 }
 
-.logo {
-    height: 50px;
+.logo img {
+    max-width: 50px;
 }
 
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 15px;
+    gap: 1rem;
 }
 
-.nav-links a {
-    color: #fff;
+.nav-links li a {
     text-decoration: none;
-    font-size: 16px;
+    color: white;
     font-weight: bold;
 }
 
-.nav-links a:hover {
+.nav-links li a:hover {
     text-decoration: underline;
 }
 
 /* Hero Section */
 .hero {
     text-align: center;
-    padding: 50px 20px;
-    background: #eef4f7;
-    border-bottom: 1px solid #ccc;
+    padding: 2rem 1rem;
+    background: #e9f5ff;
 }
 
 .hero h1 {
-    color: #003366;
-    margin-bottom: 10px;
+    margin-bottom: 1rem;
+    font-size: 2rem;
 }
 
 .hero p {
-    color: #555;
+    font-size: 1.1rem;
 }
 
 /* Updates Section */
 .updates {
-    padding: 20px;
-    background: #fff;
-    margin: 20px;
-    border-radius: 5px;
+    padding: 2rem;
+    background: white;
+    margin: 1rem 2rem;
+    border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .updates h2 {
-    color: #003366;
-    margin-bottom: 10px;
+    margin-bottom: 1rem;
+    color: #0073e6;
 }
 
-.updates ul {
-    list-style: disc inside;
+.update-list {
+    list-style: none;
+    line-height: 1.8;
 }
 
-.updates li {
-    margin-bottom: 5px;
+.update-list li strong {
+    color: #0073e6;
 }
 
-/* Footer Styling */
-.footer {
+/* Footer */
+footer {
     text-align: center;
-    background: #003366;
-    color: #fff;
-    padding: 10px 20px;
-    margin-top: 20px;
+    padding: 1rem;
+    background: #333;
+    color: white;
 }
