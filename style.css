@@ -2,61 +2,46 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0;
+    background-color: #f9f9f9;
+    color: #333;
 }
 
 header {
-    background-color: #333;
+    background-color: #004080;
     color: white;
     padding: 20px;
     text-align: center;
 }
 
-h1 {
-    margin: 0;
-    font-size: 2.5em;
-}
-
-main {
-    margin: 20px;
-    padding: 10px;
-}
-
-#actions {
-    margin-top: 20px;
-}
-
-h2 {
-    font-size: 1.8em;
+header .logo {
+    width: 150px;
     margin-bottom: 10px;
 }
 
-#agencies {
+nav ul {
+    list-style-type: none;
+    padding: 0;
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    justify-content: center;
 }
 
-#agency-list {
-    padding: 10px;
-    margin: 10px 0;
-    width: 250px;
+nav ul li {
+    margin: 0 15px;
 }
 
-#agency-actions {
-    margin-top: 20px;
-    padding: 10px;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    width: 100%;
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+main {
+    padding: 20px;
 }
 
 footer {
-    text-align: center;
-    background-color: #333;
+    background-color: #004080;
     color: white;
+    text-align: center;
     padding: 10px;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
 }
