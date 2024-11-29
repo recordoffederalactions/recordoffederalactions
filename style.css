@@ -1,5 +1,5 @@
 /* General Reset */
-body, h1, h2, p, ul, li {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -8,85 +8,89 @@ body, h1, h2, p, ul, li {
 /* Body Styling */
 body {
     font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #f9f9f9;
     color: #333;
-    padding: 20px;
+    background-color: #f4f4f9;
+    line-height: 1.6;
 }
 
-/* Header */
-header {
-    background-color: #004080;
+/* Navbar Styling */
+.navbar {
+    background: #003366;
     color: #fff;
-    padding: 20px;
-    text-align: center;
+    padding: 10px 20px;
 }
 
-header .logo-container {
+.navbar .container {
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 10px;
+    justify-content: space-between;
 }
 
-header img {
-    width: 50px;
+.logo {
     height: 50px;
 }
 
-header nav ul {
+.nav-links {
     list-style: none;
     display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 10px;
+    gap: 15px;
 }
 
-header nav a {
-    text-decoration: none;
+.nav-links a {
     color: #fff;
+    text-decoration: none;
+    font-size: 16px;
     font-weight: bold;
 }
 
-header nav a:hover {
+.nav-links a:hover {
     text-decoration: underline;
 }
 
-/* Main Content */
-main {
-    margin: 20px auto;
-    max-width: 800px;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-main .welcome {
-    margin-bottom: 20px;
-}
-
-main .rss-feeds {
-    margin-top: 20px;
-}
-
-main .rss-feeds ul {
-    list-style: none;
-    padding: 0;
-}
-
-main .rss-feeds li {
-    margin-bottom: 10px;
-    padding: 10px;
-    background-color: #f0f0f0;
-    border-left: 4px solid #004080;
-    border-radius: 4px;
-}
-
-/* Footer */
-footer {
+/* Hero Section */
+.hero {
     text-align: center;
+    padding: 50px 20px;
+    background: #eef4f7;
+    border-bottom: 1px solid #ccc;
+}
+
+.hero h1 {
+    color: #003366;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    color: #555;
+}
+
+/* Updates Section */
+.updates {
+    padding: 20px;
+    background: #fff;
+    margin: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.updates h2 {
+    color: #003366;
+    margin-bottom: 10px;
+}
+
+.updates ul {
+    list-style: disc inside;
+}
+
+.updates li {
+    margin-bottom: 5px;
+}
+
+/* Footer Styling */
+.footer {
+    text-align: center;
+    background: #003366;
+    color: #fff;
+    padding: 10px 20px;
     margin-top: 20px;
-    color: #777;
-    font-size: 0.9em;
 }
