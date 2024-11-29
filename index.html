@@ -8,8 +8,10 @@
 </head>
 <body>
     <header>
-        <img src="logo.png" alt="Record of Federal Actions Logo" class="logo">
-        <h1>Record of Federal Actions</h1>
+        <div class="logo-container">
+            <img src="logo.png" alt="Record of Federal Actions Logo">
+            <h1>Record of Federal Actions</h1>
+        </div>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -21,13 +23,18 @@
         </nav>
     </header>
     <main>
-        <section>
+        <section class="welcome">
             <h2>Welcome to the Record of Federal Actions</h2>
             <p>Track and understand the key decisions, actions, and updates from federal branches and agencies.</p>
+        </section>
+        <section class="rss-feeds">
+            <h2>Latest Updates</h2>
+            <ul id="rss-feed-container"></ul>
         </section>
     </main>
     <footer>
         <p>&copy; 2024 Record of Federal Actions. All rights reserved.</p>
     </footer>
+    <script src="scripts.js"></script>
 </body>
 </html>
